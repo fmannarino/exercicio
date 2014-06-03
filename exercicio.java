@@ -3,6 +3,7 @@ class Conta{
 	protected double saldo;
 	double limite;
 	String titular;
+	List<String> nomes;
 
 	public double getSaldo(){
 		return this.saldo;	
@@ -18,6 +19,14 @@ class Conta{
 	
 	public void atualiza(double taxa){
 		this.saldo += this.saldo * taxa;
+	}
+
+	public void adicionarContaConjunta(String nome) {
+		if (this.nomes == null) {
+			this.nomes = new ArrayList<String>();
+		}
+
+		this.nomes.add(nome);
 	}
 }
 
