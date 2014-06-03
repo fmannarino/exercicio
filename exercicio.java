@@ -3,7 +3,7 @@ class Conta{
 	protected double saldo;
 	double limite;
 	String titular;
-	List<String> nomes;
+	List<String> afiliados;
 
 	public double getSaldo(){
 		return this.saldo;	
@@ -22,11 +22,11 @@ class Conta{
 	}
 
 	public void adicionarContaConjunta(String nome) {
-		if (this.nomes == null) {
-			this.nomes = new ArrayList<String>();
+		if (this.afiliados == null) {
+			this.afiliados = new ArrayList<String>();
 		}
 
-		this.nomes.add(nome);
+		this.afiliados.add(nome);
 	}
 }
 
